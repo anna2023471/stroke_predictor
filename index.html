@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-quiv="X-UA-Cimpatible" content="IE=edge">
+    <meta name="viewport" content=""width=device-width, initial-scale="1.0">
+    <title>Stroke Risk Prediction</title>
+    <!-- D3 library-->
+    <script scrc="https://d3js.org/d3.v7.min.js"></script>
+    <!-- CSS library-->
+    <!-- <link rel="stylesheet" type="text/css" href="CSS/index.css"> -->
+    <!-- JS file-->
+    
+</head>
+
+    <body>
+        <div id="container">
+            <center>
+                <header>
+                    <center>
+                        <h1>Stroke Risk Prediction</h1>
+                        <p>Complete the form to generate prediction</p>
+                    </center>
+                </header>
+            </center>
+        </div>
+        <form action="" method="POST" id="paramForm">
+        <p>Sex</p>
+        <!-- <form> -->
+            <input type="radio" id="sex1"
+            name="sex" value="1">
+            <label for="sex1">Male</label>
+            <br>
+            <input type="radio" id="sex2"
+            name="sex" value="0">
+            <label for="sex2">Female</label>
+        <!-- </form> -->
+        <br>
+        <br>
+        <!-- <p>Enter age</p> -->
+        <!-- <form> -->
+            <label for="age"></label>Age<br>
+            <input type="text" id="age" name="age">
+        <!-- </form> -->
+        <br>
+        <p>Current diagnosis of hypertension (140/90 mmHg or above)?</p>
+        <!-- <form> -->
+            <input type="radio" id="bp1"
+            name="hypertension" value="1">
+            <label for="bp1">Yes</label>
+            <br>
+            <input type="radio" id="bp2"
+            name="hypertension" value="0">
+            <label for="bp2">No</label>
+        <!-- </form> -->
+        <br>
+        <p>Current diagnosis of heart disease?</p>
+        <!-- <form> -->
+            <input type="radio" id="hd1"
+            name="heartdisease" value="1">
+            <label for="hd1">Yes</label>
+            <br>
+            <input type="radio" id="hd2"
+            name="heartdisease" value="0">
+            <label for="hd2">No</label>
+        <!-- </form> -->
+        <br>
+        <br>
+        <!-- <p>Current average glucose level</p> -->
+        <!-- <form> -->
+            <label for="glucose"></label>Average glucose level (mg/dL)<br>
+            <input type="text" id="glucose" name="glucose">
+        <!-- </form> -->
+        <br>
+        <br>
+        <!-- <form> -->
+            <label for="bmi"></label>BMI<br>
+            <input type="text" id="bmi" name="bmi">
+        <!-- </form> -->
+        <br>
+        <br>
+        <p>Smoker (current or previous)?</p>
+        <!-- <form> -->
+            <input type="radio" id="smk1"
+            name="smoker" value="1">
+            <label for="smk1">Yes</label>
+            <br>
+            <input type="radio" id="smk2"
+            name="smoker" value="0">
+            <label for="smk2">No</label>
+            <br>
+        <!-- </form> -->
+        <br>
+        <input type="submit" value="Submit">
+       
+    </form>
+        </body>
+
+        <script src="logic.js"></script>
+
+
+
+
+
+
+
+</html>
