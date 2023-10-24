@@ -64,7 +64,9 @@ d3.json("http://127.0.0.1:5000/result").then(function(prediction) {
     console.log(prediction);
     let result = JSON.parse(prediction);
     console.log(result)
-    
+
+    if (result == 0) {d3.select(".panel-body").html(`Not at risk`)
+    } else {d3.select(".panel-body").html(`At risk`)}  
 }
 
 
