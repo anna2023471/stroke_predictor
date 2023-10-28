@@ -1,5 +1,16 @@
 let paramForm = document.getElementById("paramForm");
 
+function validate(value, loc){ 
+    document.getElementById(loc).innerHTML="";
+    var num=value;  
+    if (isNaN(num)){  
+      document.getElementById(loc).innerHTML="Please enter a number";  
+      return false;  
+    }else{  
+      return true;  
+      }  
+    }
+
 paramForm.addEventListener("submit", (event) => {
 
     event.preventDefault();
@@ -7,8 +18,14 @@ paramForm.addEventListener("submit", (event) => {
     let checkedSex = document.querySelector('input[name="sex"]:checked').value
     console.log(checkedSex);
 
+    // if (!isNull(checkedSex, "sexloc"))
+    //     return false;
+
     let inputAge = document.querySelector('input[name="age"]').value
     console.log(inputAge);
+    
+    if (!validate(inputAge, "ageloc"))
+        return false;
     
     let checkedHypertension = document.querySelector('input[name="hypertension"]:checked').value
     console.log(checkedHypertension)
@@ -18,9 +35,17 @@ paramForm.addEventListener("submit", (event) => {
 
     let inputGlucose = document.querySelector('input[name="glucose"]').value
     console.log(inputGlucose);
+    let convertedGlucose = inputGlucose * 18
+    console.log(convertedGlucose);
+
+    if (!validate(inputGlucose, "glucoseloc"))
+        return false;
 
     let inputBMI = document.querySelector('input[name="bmi"]').value
     console.log(inputBMI);
+
+    if (!validate(inputBMI, "bmiloc"))
+        return false;
     
     let checkedSmoker = document.querySelector('input[name="smoker"]:checked').value
     console.log(checkedSmoker);
@@ -29,7 +54,7 @@ paramForm.addEventListener("submit", (event) => {
                 "age": inputAge,
                 "hypertension": checkedHypertension,
                 "heart_disease": checkedHeartDisease,
-                "avg_glucose_level": inputGlucose,
+                "avg_glucose_level": convertedGlucose,
                 "bmi": inputBMI,
                 "smoking_status": checkedSmoker}
 
@@ -38,10 +63,10 @@ paramForm.addEventListener("submit", (event) => {
     postData("http://127.0.0.1:5000/submit", data)
         .then((response) => {
             console.log(response);
+        })
+        .catch((error) => {
+            console.error("Error", error);
         });
-        // .catch((error) => {
-        //     console.error("Error", error);
-        // });
 
 
 async function postData(url="http://127.0.0.1:5000/submit", data = {}) {
@@ -52,12 +77,8 @@ async function postData(url="http://127.0.0.1:5000/submit", data = {}) {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(data)
-    })
-    
-    // let result = response.json()
-    // console.log(result)
-    
-    // return await response.json();
+    }) 
+    console.log(response)
 }
 
 d3.json("http://127.0.0.1:5000/result").then(function(prediction) {
@@ -65,15 +86,12 @@ d3.json("http://127.0.0.1:5000/result").then(function(prediction) {
     let result = JSON.parse(prediction);
     console.log(result)
 
-    if (result == 0) {d3.select(".panel-body").html(`Not at risk`)
-    } else {d3.select(".panel-body").html(`At risk`)}  
+    if (result == 0) {d3.select(".panel-body").html(`NOT AT RISK`)
+    } else {d3.select(".panel-body").html(`AT RISK`)}  
 }
-
-
 );
-
-// let result = prediction.json()
-// console.log(result)
 });
-    
 
+document.getElementById("clear").addEventListener("click", (event) => {   
+    location.reload(true)
+})

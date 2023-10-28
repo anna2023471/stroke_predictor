@@ -32,13 +32,13 @@ def submit():
 
     # Combine scaled data into a dataframe and append to global list
     scaled_df = pd.DataFrame({"sex": scaled_sex, "age": scaled_age, "hypertension": scaled_hypertension,
-                              "heart_disease": scaled_heart_disease, "avg_glucose_level": scaled_glucose,
+                              "heart_disease": scaled_heart_disease, "avg_glucose_level": round(scaled_glucose,2),
                               "bmi": scaled_bmi, "smoking_status": scaled_smoker})
     temp_df.append(scaled_df)
 
     # Create dummy value to return
     output = scaled_df["age"].tolist()
-    json_output = {"result": output}
+    json_output = {"age": output}
 
     # Jsonify output, add Access Control header, and return dummy
     response = jsonify(json_output)

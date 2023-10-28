@@ -1,0 +1,140 @@
+html {
+    background-color:rgb(88, 13, 113)
+}
+
+header {
+    max-width: 80%;
+    padding: 47px;
+    margin-left: 20%;
+    margin-right: 15%;
+    background-color: #0B0544;
+    border: 2px solid white;
+    text-align: center;
+    border-radius: 18px;
+    color: rgb(0, 255, 102);
+}
+
+h1 {
+    position: absolute;
+    top: -5%;
+    left: 26%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #F6FF33;
+    font-size: 400%;    
+}
+
+.p-header {
+    position: absolute;
+    top: 8%;
+    left: 36%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+}
+
+form {
+    position: absolute;
+    left: 25%;
+    top: 15%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 90%;
+    color:aliceblue;
+}
+
+.panel-body {
+    font-size: 500%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    max-width: 35%;
+    padding: 100px;
+    margin-left: 55%;
+    margin-right: 15%;
+    margin-top: 5%;
+    background-color: #0B0544;
+    border: 2px solid white;
+    text-align: center;
+    border-radius: 18px;
+    color: #F6FF33;
+}
+
+.panel-header {
+    position: absolute;
+    left: 64%;
+    top: 18%;
+    font-size: 150%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+}
+
+.submit-button {
+    position: absolute;
+    left: 1.7%;
+    top: 97.7%;
+    text-align: center;
+    padding: 9.6px 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 100%;
+    font-weight: bold;
+    border: 2px solid #fafaf8;
+    border-radius: 12px;
+}
+.clear-button {
+    position: absolute;
+    left: 36%;
+    top: 89%;
+    text-align: center;
+    padding: 9.5px 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 90%;
+    font-weight: bold;
+    border: 2px solid #fafaf8;
+    border-radius: 12px;
+}
+
+.sex-header {
+    font-weight: bold;
+    color:rgb(218, 244, 126);
+}
+
+.age-label{
+    font-weight: bold;
+    color: rgb(218, 244, 126);
+}
+
+.ht-header {
+    font-weight: bold;
+    color: rgb(218, 244, 126);
+}
+
+.hd-header {
+    font-weight: bold;
+    color: rgb(218, 244, 126);
+}
+
+.glucose-label {
+    font-weight: bold;
+    color: rgb(218, 244, 126);
+}
+
+.bmi-label {
+    font-weight: bold;
+    color: rgb(218, 244, 126);
+}
+
+.smoker-header {
+    font-weight: bold;
+    color: rgb(218, 244, 126);
+}
+
+.age-box {
+    border: 2px solid #fafaf8;
+    width: 100px;
+} 
+
+.glucose-box {
+    border: 2px solid #fafaf8;
+    width: 100px;
+} 
+
+.bmi-box {
+    border: 2px solid #fafaf8;
+    width: 100px;
+} 

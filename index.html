@@ -8,93 +8,100 @@
     <!-- D3 library-->
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <!-- CSS library-->
-    <!-- <link rel="stylesheet" type="text/css" href="CSS/index.css"> -->
+    <link rel="stylesheet" type="text/css" href="index.css">
     <!-- JS file-->
     
 </head>
 
     <body>
-        <div id="container">
-            <center>
+        <div class="header-control" id="container">
+            <!-- <center> -->
                 <header>
                     <center>
-                        <h1>Stroke Risk Prediction</h1>
-                        <p>Complete the form to generate prediction</p>
+                        <h1>Stroke Risk Predictor</h1>
+                        <p class="p-header">Complete the form to determine if individual is at risk of stroke</p>
                     </center>
                 </header>
-            </center>
+            <!-- </center> -->
         </div>
+    <div class="form">
         <form action="" method="POST" id="paramForm">
-        <p>Sex</p>
-        
+            <p class="sex-header">Sex</p>
             <input type="radio" id="sex1"
-            name="sex" value="1">
+            name="sex" value="1"><span id="sexloc"></span>
             <label for="sex1">Male</label>
             <br>
             <input type="radio" id="sex2"
-            name="sex" value="0">
+            name="sex" value="0"><span id="sexloc"></span>
             <label for="sex2">Female</label>
         
         <br>
         <br>
         
-            <label for="age"></label>Age<br>
-            <input type="text" id="age" name="age">
+            <label for="age" class="age-label">Age (e.g. 32)</label><br><br>
+            <input type="text" class="age-box" id="age" name="age"><span id="ageloc"></span>
         
         <br>
-        <p>Current diagnosis of hypertension (140/90 mmHg or above)?</p>
+        <p class="ht-header">Hypertension (140/90 mmHg or above)</p>
         
             <input type="radio" id="bp1"
-            name="hypertension" value="1">
+            name="hypertension" value="1"><span id="htloc"></span>
             <label for="bp1">Yes</label>
             <br>
             <input type="radio" id="bp2"
-            name="hypertension" value="0">
+            name="hypertension" value="0"><span id="htloc"></span>
             <label for="bp2">No</label>
         
         <br>
-        <p>Current diagnosis of heart disease?</p>
+        <p class="hd-header">Heart disease</p>
         
             <input type="radio" id="hd1"
-            name="heartdisease" value="1">
+            name="heartdisease" value="1"><span id="hdloc"></span>
             <label for="hd1">Yes</label>
             <br>
             <input type="radio" id="hd2"
-            name="heartdisease" value="0">
+            name="heartdisease" value="0"><span id="hdloc"></span>
             <label for="hd2">No</label>
         
         <br>
         <br>
         
-            <label for="glucose"></label>Average glucose level (mg/dL)<br>
-            <input type="text" id="glucose" name="glucose">
+            <label for="glucose" class="glucose-label">Average glucose level (mmol/L, e.g. 4.8)</label><br><br>
+            <input type="text" class="glucose-box" id="glucose" name="glucose"><span id="glucoseloc"></span>
         
         <br>
         <br>
         
-            <label for="bmi"></label>BMI<br>
-            <input type="text" id="bmi" name="bmi">
+            <label for="bmi" class="bmi-label">BMI (e.g. 23.5)</label><br><br>
+            <input type="text" class="bmi-box" id="bmi" name="bmi"><span id="bmiloc"></span>
         
         <br>
-        <br>
-        <p>Smoker (current or previous)?</p>
         
-            <input type="radio" id="smk1"
-            name="smoker" value="1">
+        <p class="smoker-header">Smoker (current or previous)</p>
+        
+            <input type="radio" id="smk1" 
+            name="smoker" value="1"><span id="smkloc"></span>
             <label for="smk1">Yes</label>
             <br>
             <input type="radio" id="smk2"
-            name="smoker" value="0">
+            name="smoker" value="0"><span id="smkloc"></span>
             <label for="smk2">No</label>
             <br>
         
-        <br>
-        <input type="submit" value="Submit">
+            <br>
+            <input class="submit-button" type="submit" value="Submit" required>
+            <br>
        
     </form>
 
+    
+    <input class="clear-button" id="clear" type="button" value="Clear">
+    
+
+</div>
     <div>
         <div class="panel">
+            <div class="panel-header">PREDICTION:</div>
             <div class="panel-body"></div>                                 
     </div>
         </body>
