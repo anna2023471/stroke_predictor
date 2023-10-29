@@ -5,25 +5,19 @@
     <meta http-quiv="X-UA-Cimpatible" content="IE=edge">
     <meta name="viewport" content=""width=device-width, initial-scale="1.0">
     <title>Stroke Risk Prediction</title>
-    <!-- D3 library-->
+    <!-- d3 library-->
     <script src="https://d3js.org/d3.v7.min.js"></script>
-    <!-- CSS library-->
-    <link rel="stylesheet" type="text/css" href="index.css">
-    <!-- JS file-->
-    
+    <!-- CSS script-->
+    <link rel="stylesheet" type="text/css" href="index.css">    
 </head>
-
     <body>
         <div class="header-control" id="container">
-            <!-- <center> -->
-                <header>
-                    <center>
-                        <h1>Stroke Risk Predictor</h1>
-                        <p class="p-header">Complete the form to determine if individual is at risk of stroke</p>
-                    </center>
-                </header>
-            <!-- </center> -->
+            <header>
+                <h1>Stroke Risk Predictor</h1>
+                <p class="p-header">Complete the form to determine if individual is at risk of stroke</p>
+            </header>
         </div>
+        <!-- Create form with textbox and radio input types, and Submit button -->
     <div class="form">
         <form action="" method="POST" id="paramForm">
             <p class="sex-header">Sex</p>
@@ -34,16 +28,12 @@
             <input type="radio" id="sex2"
             name="sex" value="0"><span id="sexloc"></span>
             <label for="sex2">Female</label>
-        
         <br>
         <br>
-        
             <label for="age" class="age-label">Age (e.g. 32)</label><br><br>
             <input type="text" class="age-box" id="age" name="age"><span id="ageloc"></span>
-        
         <br>
         <p class="ht-header">Hypertension (140/90 mmHg or above)</p>
-        
             <input type="radio" id="bp1"
             name="hypertension" value="1"><span id="htloc"></span>
             <label for="bp1">Yes</label>
@@ -51,10 +41,8 @@
             <input type="radio" id="bp2"
             name="hypertension" value="0"><span id="htloc"></span>
             <label for="bp2">No</label>
-        
         <br>
         <p class="hd-header">Heart disease</p>
-        
             <input type="radio" id="hd1"
             name="heartdisease" value="1"><span id="hdloc"></span>
             <label for="hd1">Yes</label>
@@ -62,23 +50,16 @@
             <input type="radio" id="hd2"
             name="heartdisease" value="0"><span id="hdloc"></span>
             <label for="hd2">No</label>
-        
         <br>
         <br>
-        
             <label for="glucose" class="glucose-label">Average glucose level (mmol/L, e.g. 4.8)</label><br><br>
             <input type="text" class="glucose-box" id="glucose" name="glucose"><span id="glucoseloc"></span>
-        
         <br>
         <br>
-        
             <label for="bmi" class="bmi-label">BMI (e.g. 23.5)</label><br><br>
             <input type="text" class="bmi-box" id="bmi" name="bmi"><span id="bmiloc"></span>
-        
         <br>
-        
         <p class="smoker-header">Smoker (current or previous)</p>
-        
             <input type="radio" id="smk1" 
             name="smoker" value="1"><span id="smkloc"></span>
             <label for="smk1">Yes</label>
@@ -87,31 +68,20 @@
             name="smoker" value="0"><span id="smkloc"></span>
             <label for="smk2">No</label>
             <br>
-        
             <br>
             <input class="submit-button" type="submit" value="Submit" required>
             <br>
-       
     </form>
-
-    
+    <!-- Create button to reset form on user click -->
     <input class="clear-button" id="clear" type="button" value="Clear">
-    
-
 </div>
     <div>
+        <!-- Create panel to display prediction -->
         <div class="panel">
             <div class="panel-header">PREDICTION:</div>
             <div class="panel-body"></div>                                 
     </div>
         </body>
-
+        <!-- JS script to run after HTML fully loaded -->
         <script src="logic.js"></script>
-
-
-
-
-
-
-
 </html>
