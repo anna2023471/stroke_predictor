@@ -1,6 +1,8 @@
 // Set form variable to retrieve the form from HTML
 let paramForm = document.getElementById("paramForm");
 
+
+
 // Create function to validate numeric input, and reject input
 // and alert user when input is non-numeric
 function validate(value, loc){ 
@@ -21,24 +23,72 @@ function validate(value, loc){
     event.preventDefault();
 
     // Set sex variable to retieve the value of the checked option
-    let checkedSex = document.querySelector('input[name="sex"]:checked').value
-    console.log(checkedSex);
-
-    // Set age variable to equal user input
+    let sexRadio = document.querySelector('input[name="sex"]:checked')
+    // let checkedSex = sexRadio.value
+    // let checkedSex = document.querySelector('input[name="sex"]:checked').value
+    // console.log(checkedSex);
+   
+    if(sexRadio != null) {
+             let checkedSex = document.querySelector('input[name="sex"]:checked')
+             console.log(checkedSex); 
+    } 
+     else {  
+             alert("Please select sex");
+     }
+    
+     // Set age variable to equal user input
     let inputAge = document.querySelector('input[name="age"]').value
-    console.log(inputAge);
+    console.log(inputAge); 
+
+
+   
     
     // Validate that age value entered is numeric
-    if (!validate(inputAge, "ageloc"))
-        return false;
+    // if (!validate(inputAge, "ageloc"))
+    //     return false;
+
+
+    if (isNaN(inputAge) || inputAge == "") {
+        alert("Please enter age")
+        let inputAge = document.querySelector('input[name="age"]').value
+    } 
+        // if (!inputAge == null) {
+            
+        //     let inputAge = document.querySelector('input[name="age"]').value
+                   
+        // } else if (inputAge == null) { alert("Please enter age")
+        // }
     
+        // Validate that age value entered is numeric
+    // if (!validate(inputAge, "ageloc"))
+    // return false;
+    
+
     // Set hypertension variable to retrieve the value of the checked option
-    let checkedHypertension = document.querySelector('input[name="hypertension"]:checked').value
-    console.log(checkedHypertension)
+    let hypertensionRadio = document.querySelector('input[name="hypertension"]:checked')
+    // let checkedHypertension = document.querySelector('input[name="hypertension"]:checked').value
+    // console.log(checkedHypertension)
+
+    if(hypertensionRadio != null) {
+        let checkedHypertension = document.querySelector('input[name="hypertension"]:checked').value
+        console.log(checkedHypertension); 
+    } 
+    else {  
+        alert("Please select hypertension option");
+    }
 
     // Set heart disease variable to retrieve the value of the checked option
-    let checkedHeartDisease = document.querySelector('input[name="heartdisease"]:checked').value
-    console.log(checkedHeartDisease);
+    let heartdiseaseRadio = document.querySelector('input[name="heartdisease"]:checked')
+    // let checkedHeartDisease = document.querySelector('input[name="heartdisease"]:checked').value
+    // console.log(checkedHeartDisease);
+
+    if(heartdiseaseRadio != null) {
+        let checkedHeartDisease = document.querySelector('input[name="heartdisease"]:checked').value
+        console.log(checkedHeartDisease); 
+    } 
+    else {  
+        alert("Please select heart disease option");
+    }
 
     // Set glucose variable to equal user input and convert from mmol/L to mg/dL
     let inputGlucose = document.querySelector('input[name="glucose"]').value
@@ -58,18 +108,27 @@ function validate(value, loc){
     if (!validate(inputBMI, "bmiloc"))
         return false;
     
-    // Set smoking variable to retrieve the value of the checked option  
-    let checkedSmoker = document.querySelector('input[name="smoker"]:checked').value
-    console.log(checkedSmoker);
+    // Set smoking variable to retrieve the value of the checked option
+    let smokingRadio = document.querySelector('input[name="smoker"]:checked')  
+    // let checkedSmoker = document.querySelector('input[name="smoker"]:checked').value
+    // console.log(checkedSmoker);
+
+    if(smokingRadio != null) {
+        let checkedSmoker = document.querySelector('input[name="smoker"]:checked').value
+        console.log(checkedSmoker); 
+    } 
+    else {  
+        alert("Please select smoker option");
+    }
 
     // Define the data variable that contains all values to to be sent to Flask for processing
-    const data = {"sex": checkedSex,
+    const data = {"sex": sexRadio.value,
                 "age": inputAge,
-                "hypertension": checkedHypertension,
-                "heart_disease": checkedHeartDisease,
+                "hypertension": hypertensionRadio.value,
+                "heart_disease": heartdiseaseRadio.value,
                 "avg_glucose_level": convertedGlucose,
                 "bmi": inputBMI,
-                "smoking_status": checkedSmoker}
+                "smoking_status": smokingRadio.value}
 
     console.log(data);
 
