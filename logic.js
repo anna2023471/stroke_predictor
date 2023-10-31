@@ -1,21 +1,6 @@
 // Set form variable to retrieve the form from HTML
 let paramForm = document.getElementById("paramForm");
 
-
-
-// Create function to validate numeric input, and reject input
-// and alert user when input is non-numeric
-function validate(value, loc){ 
-    document.getElementById(loc).innerHTML="";
-    var num=value;  
-    if (isNaN(num)){  
-      document.getElementById(loc).innerHTML="Please enter a number";  
-      return false;  
-    }else{  
-      return true;  
-      }  
-    }
-
     // Add event listener to execute steps when form is submitted
     paramForm.addEventListener("submit", (event) => {
 
@@ -23,10 +8,8 @@ function validate(value, loc){
     event.preventDefault();
 
     // Set sex variable to retieve the value of the checked option
+    // Check an option has been selected, otherwise display alert
     let sexRadio = document.querySelector('input[name="sex"]:checked')
-    // let checkedSex = sexRadio.value
-    // let checkedSex = document.querySelector('input[name="sex"]:checked').value
-    // console.log(checkedSex);
    
     if(sexRadio != null) {
              let checkedSex = document.querySelector('input[name="sex"]:checked')
@@ -40,35 +23,16 @@ function validate(value, loc){
     let inputAge = document.querySelector('input[name="age"]').value
     console.log(inputAge); 
 
-
-   
-    
-    // Validate that age value entered is numeric
-    // if (!validate(inputAge, "ageloc"))
-    //     return false;
-
-
+    //  Check value is entered AND is a numerci value - otherwise, display message
     if (isNaN(inputAge) || inputAge == "") {
-        alert("Please enter age")
+        alert("Please enter valid age")
         let inputAge = document.querySelector('input[name="age"]').value
-    } 
-        // if (!inputAge == null) {
-            
-        //     let inputAge = document.querySelector('input[name="age"]').value
-                   
-        // } else if (inputAge == null) { alert("Please enter age")
-        // }
-    
-        // Validate that age value entered is numeric
-    // if (!validate(inputAge, "ageloc"))
-    // return false;
-    
+    }    
 
     // Set hypertension variable to retrieve the value of the checked option
+    // Check an option has been selected, otherwise display alert
     let hypertensionRadio = document.querySelector('input[name="hypertension"]:checked')
-    // let checkedHypertension = document.querySelector('input[name="hypertension"]:checked').value
-    // console.log(checkedHypertension)
-
+    
     if(hypertensionRadio != null) {
         let checkedHypertension = document.querySelector('input[name="hypertension"]:checked').value
         console.log(checkedHypertension); 
@@ -78,9 +42,8 @@ function validate(value, loc){
     }
 
     // Set heart disease variable to retrieve the value of the checked option
+    // Check an option has been selected, otherwise display alert
     let heartdiseaseRadio = document.querySelector('input[name="heartdisease"]:checked')
-    // let checkedHeartDisease = document.querySelector('input[name="heartdisease"]:checked').value
-    // console.log(checkedHeartDisease);
 
     if(heartdiseaseRadio != null) {
         let checkedHeartDisease = document.querySelector('input[name="heartdisease"]:checked').value
@@ -96,17 +59,21 @@ function validate(value, loc){
     let convertedGlucose = inputGlucose * 18
     console.log(convertedGlucose);
 
-    // Validate that glucose value entered is numeric
-    if (!validate(inputGlucose, "glucoseloc"))
-        return false;
+    //  Check value is entered AND is a numerci value - otherwise, display message
+    if (isNaN(inputGlucose) || inputGlucose == "") {
+        alert("Please enter valid glucose value")
+        let inputGlucose = document.querySelector('input[name="glucose"]').value
+    }
 
     // Set BMI variable to equal user input
     let inputBMI = document.querySelector('input[name="bmi"]').value
     console.log(inputBMI);
 
-    // Validate that BMI value entered is numeric
-    if (!validate(inputBMI, "bmiloc"))
-        return false;
+    //  Check value is entered AND is a numerci value - otherwise, display message
+    if (isNaN(inputBMI) || inputBMI == "") {
+        alert("Please enter valid BMI value")
+        let inputBMI = document.querySelector('input[name="bmi"]').value
+    }
     
     // Set smoking variable to retrieve the value of the checked option
     let smokingRadio = document.querySelector('input[name="smoker"]:checked')  
