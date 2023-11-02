@@ -167,11 +167,14 @@ d3.json("http://127.0.0.1:5000/result").then(function(prediction) {
 
     // Based on prediction value, display appropriate prediction text
     if (result == 0) {d3.select(".panel-body").html(`NOT AT RISK`);
+                    document.getElementById("result-text").value = "No";
     } else {d3.select(".panel-body").html(`AT RISK`);
+                    document.getElementById("result-text").value = "Yes";
     }
-
-    if (result == 0) {document.getElementById("result-text").value = "No"
-    } else {document.getElementById("result-text").value = "Yes"}
+  
+    
+    // if (result == 0) {document.getElementById("result-text").value = "No"
+    // } else {document.getElementById("result-text").value = "Yes"}
 }
 );
 
@@ -186,33 +189,29 @@ if (resultText == 0) {
 console.log(resultText);
 
 // Collate data for download
-const downloadData =
+let downloadData = [
     {
-        "Sex": [downloadSex],
-        "Age": [inputAge],
-        "Hypertension": [downloadHypertension],
-        "Heart Disease": [downloadHeartDisease],
-        "Glucose": [inputGlucose],
-        "BMI": [inputBMI],
-        "Smoker": [downloadSmoker],
-        "Stroke Risk": [resultText]
+        Sex: downloadSex,
+        Age: inputAge,
+        Hypertension: downloadHypertension,
+        HeartDisease: downloadHeartDisease,
+        Glucose: inputGlucose,
+        BMI: inputBMI,
+        Smoker: downloadSmoker,
+        StrokeRisk: resultText
     }
+]
 
 console.log(downloadData);
 
-const refinedData = []
 
-const titleKeys = Object.keys(downloadData)
-refinedData.push(titleKeys)
-const dataValues = Object.values(downloadData)
-refinedData.push(dataValues)
-console.log(refinedData);
+if (downloadRadio.value == 1) {
+    const csvContent = "data:text/csv;charset=utf-8," +
+        Object.keys(downloadData[0]).join(",") + "\n" +
+        downloadData.map(entry => Object.values(entry).join(",")).join("\n");
 
-if (downloadRadio == 1) {
-let csvContent = "data:text/csv;charset=utf-8,"
-        + refinedData.map(e => e.join(",")).joint("\n");
-let encodedUri = encodeURI(csvContent);
-window.open(encodedUri)
+    let encodedUri = encodeURI(csvContent);
+    window.open(encodedUri)
 }
 
 // Reset the form to blank when user presses the "Clear" button
