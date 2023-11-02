@@ -3,7 +3,7 @@ import pickle
 import pandas as pd
 
 # Import variables for scaling input
-from all_means import sex_mean, sex_std, age_mean, age_std, hypertension_mean, hypertension_std,\
+from scaling_constants import sex_mean, sex_std, age_mean, age_std, hypertension_mean, hypertension_std,\
 heart_disease_mean, heart_disease_std, glucose_mean, glucose_std, bmi_mean, bmi_std, smoker_mean, smoker_std
 
 # Create app
