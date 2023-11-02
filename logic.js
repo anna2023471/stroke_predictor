@@ -108,7 +108,8 @@ let paramForm = document.getElementById("paramForm");
 
     console.log(data);
 
-    // Convert input data to text for download
+    // Create a text version of selected radio values for downloadable csv
+    // Sex variable
     let downloadSex = ""
     if (sexRadio.value == 0) {
         downloadSex = "Female"
@@ -116,6 +117,7 @@ let paramForm = document.getElementById("paramForm");
         downloadSex = "Male"
     }
     
+    // Hypertension variable
     let downloadHypertension = ""
     if (hypertensionRadio.value == 0) {
         downloadHypertension = "No"
@@ -123,6 +125,7 @@ let paramForm = document.getElementById("paramForm");
         downloadHypertension = "Yes"
     }
 
+    // Heart disease variable
     let downloadHeartDisease = ""
     if (heartdiseaseRadio.value == 0) {
         downloadHeartDisease = "No"
@@ -130,6 +133,7 @@ let paramForm = document.getElementById("paramForm");
         downloadHeartDisease = "Yes"
     }
 
+    // Smoking variable
     let downloadSmoker = ""
     if (smokingRadio.value == 0) {
         downloadSmoker = "No"
@@ -165,60 +169,57 @@ d3.json("http://127.0.0.1:5000/result").then(function(prediction) {
     let result = JSON.parse(prediction);
     console.log(result)
 
-    // Based on prediction value, display appropriate prediction text
+    // Based on prediction value, display appropriate prediction text on page
+    // and change hidden element value for use in downloadable csv
     if (result == 0) {d3.select(".panel-body").html(`NOT AT RISK`);
                     document.getElementById("result-text").value = "No";
     } else {d3.select(".panel-body").html(`AT RISK`);
                     document.getElementById("result-text").value = "Yes";
     }
-  
-    
-    // if (result == 0) {document.getElementById("result-text").value = "No"
-    // } else {document.getElementById("result-text").value = "Yes"}
-}
-);
 
-// Pull results value from hidden element to create download value
-let resultText = document.getElementById("result-text").value
-let downloadResult = ""
-if (resultText == 0) {
+    // Pull prediction value from hidden element to create downloadable stroke prediction value
+    let resultText = document.getElementById("result-text").value
+    let downloadResult = ""
+    if (resultText == 0) {
     downloadResult = "No"
-} else {
+    } else {
     downloadResult = "Yes"
-}
-console.log(resultText);
-
-// Collate data for download
-let downloadData = [
-    {
-        Sex: downloadSex,
-        Age: inputAge,
-        Hypertension: downloadHypertension,
-        HeartDisease: downloadHeartDisease,
-        Glucose: inputGlucose,
-        BMI: inputBMI,
-        Smoker: downloadSmoker,
-        StrokeRisk: resultText
     }
-]
+    console.log(resultText);
 
-console.log(downloadData);
+    // Collate data for downloadable csv from form inputs and stroke prediction
+    let downloadData = [
+        {
+            Sex: downloadSex,
+            Age: inputAge,
+            Hypertension: downloadHypertension,
+            HeartDisease: downloadHeartDisease,
+            Glucose: inputGlucose,
+            BMI: inputBMI,
+            Smoker: downloadSmoker,
+            StrokeRisk: resultText
+        }
+    ]
+
+    console.log(downloadData);
+
+    // Collate and download csv file of results if user chooses
+    if (downloadRadio.value == 1) {
+        const csvContent = "data:text/csv;charset=utf-8," +
+            Object.keys(downloadData[0]).join(",") + "\n" +
+            downloadData.map(entry => Object.values(entry).join(",")).join("\n");
+
+        let encodedUri = encodeURI(csvContent);
+        window.open(encodedUri)
+    }
+    }
+    );
 
 
-if (downloadRadio.value == 1) {
-    const csvContent = "data:text/csv;charset=utf-8," +
-        Object.keys(downloadData[0]).join(",") + "\n" +
-        downloadData.map(entry => Object.values(entry).join(",")).join("\n");
-
-    let encodedUri = encodeURI(csvContent);
-    window.open(encodedUri)
-}
 
 // Reset the form to blank when user presses the "Clear" button
 document.getElementById("clear").addEventListener("click", (event) => {   
     location.reload(true);
 })
-
-
 
 });
