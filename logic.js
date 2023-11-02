@@ -77,8 +77,6 @@ let paramForm = document.getElementById("paramForm");
     
     // Set smoking variable to retrieve the value of the checked option
     let smokingRadio = document.querySelector('input[name="smoker"]:checked')  
-    // let checkedSmoker = document.querySelector('input[name="smoker"]:checked').value
-    // console.log(checkedSmoker);
 
     if(smokingRadio != null) {
         let checkedSmoker = document.querySelector('input[name="smoker"]:checked').value
@@ -86,6 +84,17 @@ let paramForm = document.getElementById("paramForm");
     } 
     else {  
         alert("Please select smoker option");
+    }
+
+    // Set download variable to retrieve the value of the checked option
+    let downloadRadio = document.querySelector('input[name="download"]:checked')  
+
+    if(downloadRadio != null) {
+    let checkedDownload = document.querySelector('input[name="download"]:checked').value
+    console.log(checkedDownload); 
+    } 
+    else {  
+     alert("Please select downlaod option");
     }
 
     // Define the data variable that contains all values to to be sent to Flask for processing
@@ -98,6 +107,35 @@ let paramForm = document.getElementById("paramForm");
                 "smoking_status": smokingRadio.value}
 
     console.log(data);
+
+    // Convert input data to text for download
+    let downloadSex = ""
+    if (sexRadio.value == 0) {
+        downloadSex = "Female"
+    } else {
+        downloadSex = "Male"
+    }
+    
+    let downloadHypertension = ""
+    if (hypertensionRadio.value == 0) {
+        downloadHypertension = "No"
+    } else {
+        downloadHypertension = "Yes"
+    }
+
+    let downloadHeartDisease = ""
+    if (heartdiseaseRadio.value == 0) {
+        downloadHeartDisease = "No"
+    } else {
+        downloadHeartDisease = "Yes"
+    }
+
+    let downloadSmoker = ""
+    if (smokingRadio.value == 0) {
+        downloadSmoker = "No"
+    } else {
+        downloadSmoker = "Yes"
+    }  
 
     // Create function to post data to Flask endopoint
     postData("http://127.0.0.1:5000/submit", data)
@@ -128,13 +166,60 @@ d3.json("http://127.0.0.1:5000/result").then(function(prediction) {
     console.log(result)
 
     // Based on prediction value, display appropriate prediction text
-    if (result == 0) {d3.select(".panel-body").html(`NOT AT RISK`)
-    } else {d3.select(".panel-body").html(`AT RISK`)}  
+    if (result == 0) {d3.select(".panel-body").html(`NOT AT RISK`);
+    } else {d3.select(".panel-body").html(`AT RISK`);
+    }
+
+    if (result == 0) {document.getElementById("result-text").value = "No"
+    } else {document.getElementById("result-text").value = "Yes"}
 }
 );
-});
+
+// Pull results value from hidden element to create download value
+let resultText = document.getElementById("result-text").value
+let downloadResult = ""
+if (resultText == 0) {
+    downloadResult = "No"
+} else {
+    downloadResult = "Yes"
+}
+console.log(resultText);
+
+// Collate data for download
+const downloadData =
+    {
+        "Sex": [downloadSex],
+        "Age": [inputAge],
+        "Hypertension": [downloadHypertension],
+        "Heart Disease": [downloadHeartDisease],
+        "Glucose": [inputGlucose],
+        "BMI": [inputBMI],
+        "Smoker": [downloadSmoker],
+        "Stroke Risk": [resultText]
+    }
+
+console.log(downloadData);
+
+const refinedData = []
+
+const titleKeys = Object.keys(downloadData)
+refinedData.push(titleKeys)
+const dataValues = Object.values(downloadData)
+refinedData.push(dataValues)
+console.log(refinedData);
+
+if (downloadRadio == 1) {
+let csvContent = "data:text/csv;charset=utf-8,"
+        + refinedData.map(e => e.join(",")).joint("\n");
+let encodedUri = encodeURI(csvContent);
+window.open(encodedUri)
+}
 
 // Reset the form to blank when user presses the "Clear" button
 document.getElementById("clear").addEventListener("click", (event) => {   
-    location.reload(true)
+    location.reload(true);
 })
+
+
+
+});

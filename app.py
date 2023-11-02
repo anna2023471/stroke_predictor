@@ -69,11 +69,6 @@ def result():
     response = jsonify(response_data)
     print(response)
     response.headers.add('Access-Control-Allow-Origin', '*')
-    # response.headers.add('Access-Control-Allow-Methods', 'POST')
-    # response.headers.add('Access-Control-Allow-Headers', 'Content-Type')
-    # response.headers.add("Content-Type", "application/json")
-    # response.headers.add("Access-Control-Allow-Credentials", True)
-    # response.headers.add('X-Content-Type-Options', 'nosniff')
     return response
     
 # Run app
