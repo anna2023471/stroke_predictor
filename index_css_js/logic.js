@@ -23,7 +23,7 @@ let paramForm = document.getElementById("paramForm");
     let inputAge = document.querySelector('input[name="age"]').value
     console.log(inputAge); 
 
-    //  Check value is entered AND is a numerci value - otherwise, display message
+    //  Check value is entered AND is a numeric value - otherwise, display message
     if (isNaN(inputAge) || inputAge == "") {
         alert("Please enter valid age")
         let inputAge = document.querySelector('input[name="age"]').value
@@ -59,7 +59,7 @@ let paramForm = document.getElementById("paramForm");
     let convertedGlucose = inputGlucose * 18
     console.log(convertedGlucose);
 
-    //  Check value is entered AND is a numerci value - otherwise, display message
+    //  Check value is entered AND is a numeric value - otherwise, display message
     if (isNaN(inputGlucose) || inputGlucose == "") {
         alert("Please enter valid glucose value")
         let inputGlucose = document.querySelector('input[name="glucose"]').value
@@ -69,7 +69,7 @@ let paramForm = document.getElementById("paramForm");
     let inputBMI = document.querySelector('input[name="bmi"]').value
     console.log(inputBMI);
 
-    //  Check value is entered AND is a numerci value - otherwise, display message
+    //  Check value is entered AND is a numeric value - otherwise, display message
     if (isNaN(inputBMI) || inputBMI == "") {
         alert("Please enter valid BMI value")
         let inputBMI = document.querySelector('input[name="bmi"]').value
@@ -87,14 +87,14 @@ let paramForm = document.getElementById("paramForm");
     }
 
     // Set download variable to retrieve the value of the checked option
-    let downloadRadio = document.querySelector('input[name="download"]:checked')  
+    let downloadRadio = document.querySelector('input[name="download"]:checked') 
 
     if(downloadRadio != null) {
     let checkedDownload = document.querySelector('input[name="download"]:checked').value
     console.log(checkedDownload); 
     } 
     else {  
-     alert("Please select downlaod option");
+        downloadRadio = 0;
     }
 
     // Define the data variable that contains all values to to be sent to Flask for processing

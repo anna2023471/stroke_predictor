@@ -75,19 +75,21 @@
             name="smoker" value="0">
             <label for="smk2">No</label> 
         <br>
+        <br>
+        <br>
         <!-- Choose if results download to csv -->
-        <p class="download-header">Download results to csv?</p>
+        <!-- <p class="download-header">Download results to csv?</p> -->
             <input type="radio" id="download1"
             name="download" value="1">
-            <label for="download1">Yes</label>
+            <label for="download1" class="download-label">Download results</label>
             <br>
-            <input type="radio" id="download2"
+            <!-- <input type="radio" id="download2"
             name="download" value="0">
             <label for="download2">No</label>
             <br>
-            <br>
+            <br> -->
             <!-- Add button to submit all inputs and selections -->
-            <input class="submit-button" type="submit" value="Submit" required>
+        <input class="submit-button" type="submit" value="Submit" required>
     </form>
     <!-- Create hidden field to store prediction value retrieved from Flask
     for use in downloadable csv -->

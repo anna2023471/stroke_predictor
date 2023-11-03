@@ -69,7 +69,7 @@ form {
 .submit-button {
     position: absolute;
     left: 115%;
-    top: 90%;
+    top: 97%;
     text-align: center;
     padding: 20px 50px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -126,7 +126,7 @@ form {
     color: rgb(218, 244, 126);
 }
 
-.download-header {
+.download-label {
     font-weight: bold;
     color: rgb(218, 244, 126);
 }
