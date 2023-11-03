@@ -87,6 +87,7 @@ let paramForm = document.getElementById("paramForm");
     }
 
     // Set download variable to retrieve the value of the checked option
+    // If option selected, set value to html - otherwise, set value to 0
     let downloadRadio = document.querySelector('input[name="download"]:checked') 
 
     if(downloadRadio != null) {
@@ -187,7 +188,7 @@ d3.json("http://127.0.0.1:5000/result").then(function(prediction) {
     }
     console.log(resultText);
 
-    // Collate data for downloadable csv from form inputs and stroke prediction
+    // Collate data for downloadable csv from user inputs and stroke prediction
     let downloadData = [
         {
             Sex: downloadSex,
@@ -214,8 +215,6 @@ d3.json("http://127.0.0.1:5000/result").then(function(prediction) {
     }
     }
     );
-
-
 
 // Reset the form to blank when user presses the "Clear" button
 document.getElementById("clear").addEventListener("click", (event) => {   

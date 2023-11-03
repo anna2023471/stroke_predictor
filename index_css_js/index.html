@@ -77,34 +77,27 @@
         <br>
         <br>
         <br>
-        <!-- Choose if results download to csv -->
-        <!-- <p class="download-header">Download results to csv?</p> -->
+            <!-- Choose if results download to csv -->
             <input type="radio" id="download1"
             name="download" value="1">
             <label for="download1" class="download-label">Download results</label>
             <br>
-            <!-- <input type="radio" id="download2"
-            name="download" value="0">
-            <label for="download2">No</label>
-            <br>
-            <br> -->
             <!-- Add button to submit all inputs and selections -->
-        <input class="submit-button" type="submit" value="Submit" required>
-    </form>
-    <!-- Create hidden field to store prediction value retrieved from Flask
-    for use in downloadable csv -->
-    <input type="hidden" class="hidden-field" name="hidden-result" id="result-text" value=""> 
-    <!-- Create button to reset form on user click -->
-    <input class="clear-button" id="clear" type="button" value="Clear">
-</div>
-    <div>
-        <!-- Create panel to display prediction -->
-        <div class="panel">
-            <div class="panel-header">PREDICTION:</div>
-            <div class="panel-body"></div>                               
+            <input class="submit-button" type="submit" value="Submit" required>
+        </form>
+        <!-- Create hidden field to store prediction value retrieved from Flask
+        for use in downloadable csv -->
+        <input type="hidden" class="hidden-field" name="hidden-result" id="result-text" value=""> 
+        <!-- Create button to reset form on user click -->
+        <input class="clear-button" id="clear" type="button" value="Clear">
     </div>
-        <!-- JS script to run after HTML fully loaded -->
-        <script src="logic.js"></script>
-        </body>
-        
+        <div>
+            <!-- Create panel to display prediction -->
+            <div class="panel">
+                <div class="panel-header">PREDICTION:</div>
+                <div class="panel-body"></div>                               
+        </div>
+            <!-- JS script to run after HTML fully loaded -->
+            <script src="logic.js"></script>
+    </body>
 </html>
