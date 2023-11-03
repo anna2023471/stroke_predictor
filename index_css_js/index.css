@@ -36,8 +36,8 @@ h3 {
 form {
     position: absolute;
     left: 25%;
-    top: 13%;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    top: 16%;
+    font-family: century-gothic, sans-serif;
     font-size: 90%;
     color:aliceblue;
 }
@@ -68,8 +68,8 @@ form {
 
 .submit-button {
     position: absolute;
-    left: 115%;
-    top: 97%;
+    left: 135%;
+    top: 95.5%;
     text-align: center;
     padding: 20px 50px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -80,7 +80,7 @@ form {
 }
 .clear-button {
     position: absolute;
-    left: 73%;
+    left: 74%;
     top: 88.7%;
     text-align: center;
     padding: 20px 50px;
