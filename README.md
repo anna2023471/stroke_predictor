@@ -8,6 +8,12 @@ The aim of this project was to use a machine learning model to create a stroke p
 
 A clean stroke dataset was obtained from Kaggle. The data was balanced across conidtions (stroke and no-stroke) and gender (male and female). 
 
+#### Record distribution by condition
+![by_condition](https://github.com/anna2023471/stroke_predictor/assets/132623167/f1230c00-c287-4da6-b40b-a455324100b8)
+
+#### Gender distribution by condition
+![by_sex](https://github.com/anna2023471/stroke_predictor/assets/132623167/054765c9-5d58-4ea3-81d3-4b6763005fce)
+
 The following features were retained in creating the model:
 
     *Sex (male, female)
