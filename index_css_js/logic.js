@@ -76,6 +76,7 @@ let paramForm = document.getElementById("paramForm");
     }
     
     // Set smoking variable to retrieve the value of the checked option
+    // Check an option has been selected, otherwise display alert
     let smokingRadio = document.querySelector('input[name="smoker"]:checked')  
 
     if(smokingRadio != null) {

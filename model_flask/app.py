@@ -36,7 +36,8 @@ def submit():
                               "bmi": scaled_bmi, "smoking_status": scaled_smoker})
     temp_df.append(scaled_df)
 
-    # Create dummy value to return
+    # Create dummy value to return (this response is received as opaque due to cors being disabled in Fetch, so
+    # is not read)
     output = scaled_df["age"].tolist()
     json_output = {"age": output}
 
