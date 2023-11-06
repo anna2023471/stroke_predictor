@@ -30,7 +30,7 @@ The following data features were retained in creating the model:
 
     *Smoking status (ever smoked - yes/no)
 
-The following features were excluded as they were deemed unhelpful or too subjective:
+The following features were excluded as they were deemed unhelpful:
 
     *Marital status (married, not married)
 
