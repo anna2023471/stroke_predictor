@@ -106,5 +106,7 @@ Pressing the "Clear" button resets the form to blank.
 
 ![app-screenshot](https://github.com/anna2023471/stroke_predictor/assets/132623167/66255185-3341-40b3-8288-f43d67d32411)
 
+``` yml
+
 
 
