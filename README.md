@@ -101,3 +101,10 @@ The form is also validated in JavaScript to ensure that all required values are 
 If the user ticks the "Download results" box, the prediction is displayed on screen and a csv file with the user's input and their prediction is downloaded on submit. If the user does not tick the box, the prediction is displayed on screen but no download occurs.
 
 Pressing the "Clear" button resets the form to blank.
+
+#### Screenshot of completed form and prediction
+
+![app-screenshot](https://github.com/anna2023471/stroke_predictor/assets/132623167/66255185-3341-40b3-8288-f43d67d32411)
+
+
+
