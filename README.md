@@ -14,7 +14,7 @@ A clean stroke dataset was obtained from Kaggle. The data was balanced across co
 #### Gender distribution by condition
 ![by_sex](https://github.com/anna2023471/stroke_predictor/assets/132623167/054765c9-5d58-4ea3-81d3-4b6763005fce)
 
-The following features were retained in creating the model:
+The following data features were retained in creating the model:
 
     *Sex (male, female)
 
@@ -34,9 +34,9 @@ The following features were excluded as they were deemed unhelpful or too subjec
 
     *Marital status (married, not married)
 
-    *Occupation type (never worked, children, self-empployed, government, private)
+    *Occupation type (never worked, children, self-employed, government, private)
 
-    *Residence type (urban., rural)
+    *Residence type (urban, rural)
 
 ## Machine Learning Model
 
