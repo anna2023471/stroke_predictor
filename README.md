@@ -124,40 +124,31 @@ Pressing the "Clear" button resets the form to blank.
 
 #### Repository scrtucture
 
-¦   README.md
-¦   
+,,,tree
+
+[tree.txt](https://github.com/anna2023471/stroke_predictor/files/13289053/tree.txt)
+
+�   README.md
+�   
 +---index_css_js
-
-¦       index.css
-
-¦       index.html
-
-¦       logic.js
-¦       
+�       index.css
+�       index.html
+�       logic.js
+�       
 +---model_flask
-
-    ¦   app.py
-    
-    ¦   model_creation.ipynb
-    
-    ¦   scaling_constants.py
-    
-    ¦   stroke_model.sav
-    ¦   
+    �   app.py
+    �   model_creation.ipynb
+    �   scaling_constants.py
+    �   stroke_model.sav
+    �   
     +---data
-    
-    ¦       stroke_dataset.csv
-    ¦       
+    �       stroke_dataset.csv
+    �       
     +---figures
-    
             app-screenshot.png
-            
             by_condition.png
-            
             by_sex.png
-
-
-
+            
 
 
 
