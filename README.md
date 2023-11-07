@@ -124,7 +124,7 @@ Pressing the "Clear" button resets the form to blank.
 
 #### Repository scrtucture
 
-,,,tree
+```tree
 
 [tree.txt](https://github.com/anna2023471/stroke_predictor/files/13289053/tree.txt)
 
