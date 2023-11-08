@@ -6,9 +6,15 @@ The aim of this project was to use a machine learning model to create a stroke p
 
 ## Data
 
-A clean stroke dataset was obtained from Kaggle. The data was balanced across conidtions (stroke and no-stroke) and gender (male and female). 
+A clean stroke dataset was obtained from Kaggle. The data was balanced across coniditions (stroke and no-stroke) and gender (male and female). 
 
-The following features were retained in creating the model:
+#### Record distribution by condition
+![by_condition](https://github.com/anna2023471/stroke_predictor/assets/132623167/f1230c00-c287-4da6-b40b-a455324100b8)
+
+#### Gender distribution by condition
+![by_sex](https://github.com/anna2023471/stroke_predictor/assets/132623167/054765c9-5d58-4ea3-81d3-4b6763005fce)
+
+The following data features were retained in creating the model:
 
     *Sex (male, female)
 
@@ -24,13 +30,13 @@ The following features were retained in creating the model:
 
     *Smoking status (ever smoked - yes/no)
 
-The following features were excluded as they were deemed unhelpful or too subjective:
+The following features were excluded as they were deemed unhelpful:
 
     *Marital status (married, not married)
 
-    *Occupation type (never worked, children, self-empployed, government, private)
+    *Occupation type (never worked, children, self-employed, government, private)
 
-    *Residence type (urban., rural)
+    *Residence type (urban, rural)
 
 ## Machine Learning Model
 
@@ -95,3 +101,51 @@ The form is also validated in JavaScript to ensure that all required values are 
 If the user ticks the "Download results" box, the prediction is displayed on screen and a csv file with the user's input and their prediction is downloaded on submit. If the user does not tick the box, the prediction is displayed on screen but no download occurs.
 
 Pressing the "Clear" button resets the form to blank.
+
+#### Screenshot of completed form and prediction
+
+![app-screenshot](https://github.com/anna2023471/stroke_predictor/assets/132623167/66255185-3341-40b3-8288-f43d67d32411)
+
+#### Libraries used
+
+   *Pandas
+
+   *Matplotlib
+
+   *D3
+
+#### Languages used
+
+   *Python
+
+   *JavaScript
+
+   *HTML/CSS
+
+#### Repository scrtucture
+
+```tree
+|   
++---index_css_js
+|      | index.css
+|      | index.html
+|      | logic.js
+|      | 
++---model_flask
+|      | app.py
+|      | model_creation.ipynb
+|      | scaling_constants.py
+|      | stroke_model.sav
+|      |    
+|      +---data
+|      |    | stroke_dataset.csv
+|      |     
+|      +---figures
+|      |    | app-screenshot.png
+|      |    | by_condition.png
+|      |    | by_sex.png
+            
+
+
+
+
