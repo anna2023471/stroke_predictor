@@ -11,7 +11,7 @@ A clean stroke dataset was obtained from Kaggle at this link https://www.kaggle.
 #### Record distribution by condition
 ![by_condition](https://github.com/anna2023471/stroke_predictor/assets/132623167/e239309f-869f-4725-848a-5c0de2228302)
 
-### Record distribution by gender
+#### Record distribution by gender
 ![by_sex_overall](https://github.com/anna2023471/stroke_predictor/assets/132623167/5b001c20-ffa7-415c-ad26-48070e364874)
 
 
