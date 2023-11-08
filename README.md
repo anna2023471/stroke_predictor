@@ -155,6 +155,7 @@ Pressing the "Clear" button resets the form to blank.
 |      |    | by_condition.png
 |      |    | by_sex.png
 |      |    | by_sex_overall.png
+|      |    | project_map.jpg
             
 
 
