@@ -9,10 +9,15 @@ The aim of this project was to use a machine learning model to create a stroke p
 A clean stroke dataset was obtained from Kaggle at this link https://www.kaggle.com/datasets/prosperchuks/health-dataset?select=stroke_data.csv. The data was balanced across coniditions (stroke and no-stroke) and gender (male and female). 
 
 #### Record distribution by condition
-![by_condition](https://github.com/anna2023471/stroke_predictor/assets/132623167/f1230c00-c287-4da6-b40b-a455324100b8)
+![by_condition](https://github.com/anna2023471/stroke_predictor/assets/132623167/e239309f-869f-4725-848a-5c0de2228302)
+
+### Record distribution by gender
+![by_sex_overall](https://github.com/anna2023471/stroke_predictor/assets/132623167/5b001c20-ffa7-415c-ad26-48070e364874)
+
 
 #### Gender distribution by condition
-![by_sex](https://github.com/anna2023471/stroke_predictor/assets/132623167/054765c9-5d58-4ea3-81d3-4b6763005fce)
+![by_sex](https://github.com/anna2023471/stroke_predictor/assets/132623167/3a213d3d-481b-4a35-9eef-492de1208034)
+
 
 The following data features were retained in creating the model:
 
