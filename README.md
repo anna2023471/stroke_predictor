@@ -97,7 +97,7 @@ HTML and CSS were used to design a web form to accept user input and display the
 
 The form consists of numeric input fields and radio buttons for binary selection.
 
-JavaScript, Fetch, and D3 are used to send user input to Flask, retrieve the prediction, and allow the user to download the resutls as a CSV if they wish.
+JavaScript (including Fetch and d3 are used to send user input to Flask, retrieve the prediction, and allow the user to download the resutls as a CSV if they wish.
 
 JavaScript is also used to convert the average glucose input from mmol/L to mg/dL. The model accepts average glucose as an mg/dL value. However, a blood glucose meter (rather than a full blood test) is most likely to be used in the settings that this app is designed for. As blood glucose meters provide readings in mmol/L, it was decided to accept user input in mmol/L and convert it to mg/dL before processing.
 
@@ -117,7 +117,7 @@ Pressing the "Clear" button resets the form to blank.
 
    *Matplotlib
 
-   *D3
+   *d3
 
 #### Languages used
 
