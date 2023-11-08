@@ -43,6 +43,8 @@ The following features were excluded as they were deemed unhelpful:
 
     *Residence type (urban, rural)
 
+Any null values were also removed from the dataset. The final dataset contained 40,907 records.
+
 ## Machine Learning Model
 
 ### Model details
