@@ -9,10 +9,15 @@ The aim of this project was to use a machine learning model to create a stroke p
 A clean stroke dataset was obtained from Kaggle at this link https://www.kaggle.com/datasets/prosperchuks/health-dataset?select=stroke_data.csv. The data was balanced across coniditions (stroke and no-stroke) and gender (male and female). 
 
 #### Record distribution by condition
-![by_condition](https://github.com/anna2023471/stroke_predictor/assets/132623167/f1230c00-c287-4da6-b40b-a455324100b8)
+![by_condition](https://github.com/anna2023471/stroke_predictor/assets/132623167/e239309f-869f-4725-848a-5c0de2228302)
+
+#### Record distribution by gender
+![by_sex_overall](https://github.com/anna2023471/stroke_predictor/assets/132623167/5b001c20-ffa7-415c-ad26-48070e364874)
+
 
 #### Gender distribution by condition
-![by_sex](https://github.com/anna2023471/stroke_predictor/assets/132623167/054765c9-5d58-4ea3-81d3-4b6763005fce)
+![by_sex](https://github.com/anna2023471/stroke_predictor/assets/132623167/3a213d3d-481b-4a35-9eef-492de1208034)
+
 
 The following data features were retained in creating the model:
 
@@ -37,6 +42,8 @@ The following features were excluded as they were deemed unhelpful:
     *Occupation type (never worked, children, self-employed, government, private)
 
     *Residence type (urban, rural)
+
+Any null values were also removed from the dataset. The final dataset contained 40,907 records.
 
 ## Machine Learning Model
 
@@ -92,7 +99,7 @@ HTML and CSS were used to design a web form to accept user input and display the
 
 The form consists of numeric input fields and radio buttons for binary selection.
 
-JavaScript, Fetch, and D3 are used to send user input to Flask, retrieve the prediction, and allow the user to download the resutls as a CSV if they wish.
+JavaScript (including fetch and d3 are used to send user input to Flask, retrieve the prediction, and allow the user to download the results as a CSV if they wish.
 
 JavaScript is also used to convert the average glucose input from mmol/L to mg/dL. The model accepts average glucose as an mg/dL value. However, a blood glucose meter (rather than a full blood test) is most likely to be used in the settings that this app is designed for. As blood glucose meters provide readings in mmol/L, it was decided to accept user input in mmol/L and convert it to mg/dL before processing.
 
@@ -112,7 +119,7 @@ Pressing the "Clear" button resets the form to blank.
 
    *Matplotlib
 
-   *D3
+   *d3
 
 #### Languages used
 
@@ -144,6 +151,7 @@ Pressing the "Clear" button resets the form to blank.
 |      |    | app-screenshot.png
 |      |    | by_condition.png
 |      |    | by_sex.png
+|      |    | by_sex_overall.png
             
 
 
