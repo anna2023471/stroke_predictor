@@ -118,21 +118,21 @@ Pressing the "Clear" button resets the form to blank.
 
 #### Libraries used
 
-   *Pandas
+      *Pandas
 
-   *Matplotlib
+      *Matplotlib
 
-   *d3
+      *d3
 
-   *TensorFlow, Keras
+      *TensorFlow, Keras
 
 #### Languages used
 
-   *Python
+      *Python
 
-   *JavaScript
+      *JavaScript
 
-   *HTML/CSS
+      *HTML/CSS
 
 #### Repository scrtucture
 
