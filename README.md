@@ -52,7 +52,7 @@ Any null values were also removed from the dataset. The final dataset contained 
 
 ### Model details
 
-A sequetial neural network model was chosen. The model was built using Tensorflow Keras and optimised over eight iterations. The number of neurons and hidden layers were adjusted as part of optimisation until satisfactory performance was achieved. The final model consisted of:
+A sequetial neural network model was chosen. The model was built using TensorFlow Keras and optimised over eight iterations. The number of neurons and hidden layers were adjusted as part of optimisation until satisfactory performance was achieved. The final model consisted of:
 
     *Four hideen layers (each using the relu activation function)
 
@@ -123,6 +123,8 @@ Pressing the "Clear" button resets the form to blank.
    *Matplotlib
 
    *d3
+
+   *TensorFlow
 
 #### Languages used
 
