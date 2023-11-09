@@ -9,7 +9,7 @@ The aim of this project was to use a machine learning model to create a stroke p
 
 ## Data
 
-A clean stroke dataset was obtained from Kaggle at this link https://www.kaggle.com/datasets/prosperchuks/health-dataset?select=stroke_data.csv. The data was balanced across coniditions (stroke and no-stroke). There were slightly more males in the dataset, and slightly more females in the stroke condition.
+A clean stroke dataset was obtained from Kaggle at this link https://www.kaggle.com/datasets/prosperchuks/health-dataset?select=stroke_data.csv. The features were already numerically coded and the data was balanced across coniditions (stroke and no-stroke). There were slightly more males in the dataset, and slightly more females in the stroke condition.
 
 #### Record distribution by condition
 ![by_condition](https://github.com/anna2023471/stroke_predictor/assets/132623167/e239309f-869f-4725-848a-5c0de2228302)
@@ -106,7 +106,7 @@ The form consists of numeric input fields and radio buttons for binary selection
 
 JavaScript (including fetch and d3) are used to send user input to Flask, retrieve the prediction, and allow the user to download the results as a CSV if they wish.
 
-JavaScript is also used to convert the average glucose input from mmol/L to mg/dL. The model accepts average glucose as an mg/dL value. However, a blood glucose meter (rather than a full blood test) is most likely to be used in the settings that this app is designed for. As blood glucose meters provide readings in mmol/L, it was decided to accept user input in mmol/L and convert it to mg/dL before processing.
+JavaScript is also used to convert the average glucose input from mmol/L to mg/dL. The model accepts average glucose as an mg/dL value. However, mg/dL is a measure mostly used in the USA; NZ and Australia use mmol/L. Therefore, it was decided to accept user input in mmol/L to make the app user-fiendly, and then convert it to mg/dL for generating the prediction.
 
 The form is also validated in JavaScript to ensure that all required values are provided, and that only valid numeric values are entered in the input boxes. If the user fails to provide a required value, or provides it it in the wrong format, an alert appears asking the user to provide the required input; the form does not submit until all required inputs are provided in a valid format. 
 
@@ -160,6 +160,7 @@ Pressing the "Clear" button resets the form to blank.
 |      |    | by_sex.png
 |      |    | by_sex_overall.png
 |      |    | project_map.jpg
+Presentation.pdf
             
 
 
