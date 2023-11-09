@@ -106,7 +106,7 @@ The form consists of numeric input fields and radio buttons for binary selection
 
 JavaScript (including fetch and d3) are used to send user input to Flask, retrieve the prediction, and allow the user to download the results as a CSV if they wish.
 
-JavaScript is also used to convert the average glucose input from mmol/L to mg/dL. The model accepts average glucose as an mg/dL value. However, mg/dL is a measure mostly used in the USA; NZ and Australia use mmol/L. Therefore, it was decided to accept user input in mmol/L and convert it to mg/dL before processing.
+JavaScript is also used to convert the average glucose input from mmol/L to mg/dL. The model accepts average glucose as an mg/dL value. However, mg/dL is a measure mostly used in the USA; NZ and Australia use mmol/L. Therefore, it was decided to accept user input in mmol/L to make the app user-fiendly, and then convert it to mg/dL for generating the prediction.
 
 The form is also validated in JavaScript to ensure that all required values are provided, and that only valid numeric values are entered in the input boxes. If the user fails to provide a required value, or provides it it in the wrong format, an alert appears asking the user to provide the required input; the form does not submit until all required inputs are provided in a valid format. 
 
