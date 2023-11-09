@@ -4,7 +4,7 @@
 
 The aim of this project was to use a machine learning model to create a stroke prediction web app that could be used in a basic health screening setting. The app takes in basic demographic and medical information, returns a binary classification of stroke risk (i.e. "at risk" or "not at risk"), and allows the user to download their input and prediction in CSV format. This app could be used in a mobile health screening setting (e.g. at public events, malls, etc.) as it does not require any sophisticated medical tetsing such as blood tests. The most advanced apparatus required by this app is a blood glucose meter and these are already routinely used in such settings. The record of the inputs and prediction could be kept by the individual being assessed, either for their own information or to encourage further follow up with their doctor. 
 
-The main benefit of this app would be its ability to reach inidividuals and communities who do not have regular contact with healthcare providers, either due to remote location or simple resistance go visiting the doctor (e.g. farming communities).
+The main benefit of this app would be its ability to reach inidividuals and communities who do not have regular contact with healthcare providers, either due to remote location or simple resistance to visiting the doctor (e.g. farming communities). Identifying such individuals as being at risk of stroke may encourage them to follow up with their doctor and take better care of their health, and potentially enable more targeted provision of health services where the opportunity may have otherwise been missed.
 
 #### Project map
 ![project_map](https://github.com/anna2023471/stroke_predictor/assets/132623167/132a35c3-6e1a-4f6d-abef-40e2f727db40)
