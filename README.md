@@ -58,7 +58,7 @@ A sequetial neural network model was chosen. The model was built using TensorFlo
 
     *Four hidden layers (each using the relu activation function)
 
-    *One output layer (using the sigmoid activation function for binary output)
+    *One output layer (using the sigmoid activation function for binary output - <0.5 not at risk, >0.5 at risk)
 
     *8,956 total parameters
 
