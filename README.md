@@ -46,6 +46,8 @@ The following features were excluded as they were deemed unhelpful:
 
     *Residence type (urban, rural)
 
+The target variable was whether the individual had had a stoke (1) or not (0).
+
 Any null values were also removed from the dataset. The final dataset contained 40,907 records.
 
 ## Machine Learning Model
