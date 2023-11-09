@@ -128,6 +128,8 @@ Pressing the "Clear" button resets the form to blank.
 
       *d3
 
+      *scikit-learn
+
       *TensorFlow, Keras
 
 #### Languages used
