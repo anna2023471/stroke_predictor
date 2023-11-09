@@ -56,7 +56,7 @@ Any null values were also removed from the dataset. The final dataset contained 
 
 A sequetial neural network model was chosen. The model was built using TensorFlow and Keras, and optimised over eight iterations. The number of neurons and hidden layers were adjusted as part of optimisation until satisfactory performance was achieved. The final model consisted of:
 
-    *Four hideen layers (each using the relu activation function)
+    *Four hidden layers (each using the relu activation function)
 
     *One output layer (using the sigmoid activation function for binary output)
 
