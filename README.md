@@ -86,7 +86,7 @@ The POST route:
 
     *receives user input
 
-    *scales the input using the mean and standard deviation from the training data
+    *scales the input using the mean and standard deviation from the training set
 
     *converts the scaled input into a Pandas DataFrame
 
